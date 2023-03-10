@@ -1,8 +1,8 @@
 import { useState } from 'react';
 import PropTypes from 'prop-types';
 import NavBarAdmin from '../components/NavBar.Admin';
+import FormAdmin from '../components/Form.Admin';
 import useValidateAuth from '../hooks/useValidateAuth';
-import FormNewUser from '../components/FormNewUser';
 import TableAdmin from '../components/TableAdmin';
 
 function AdminManage(props) {
@@ -14,7 +14,7 @@ function AdminManage(props) {
   return (
     <main>
       <NavBarAdmin />
-      <FormNewUser setUsers={ setUsers } />
+      <FormAdmin setUsers={ setUsers } />
       <TableAdmin users={ users } setUsers={ setUsers } />
     </main>
   );

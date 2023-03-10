@@ -7,7 +7,7 @@ import isValidEmail from '../utils/validations';
 const MIN_PASSWORD_LENGTH = 6;
 const MIN_NAME_LENGTH = 12;
 
-function FormNewUser({ users, setUsers }) {
+function FormAdmin({ users, setUsers }) {
   const INITIAL_STATE = {
     name: '',
     email: '',
@@ -139,7 +139,7 @@ function FormNewUser({ users, setUsers }) {
   );
 }
 
-FormNewUser.propTypes = {
+FormAdmin.propTypes = {
   users: PropTypes.arrayOf(
     PropTypes.shape({
       id: PropTypes.number.isRequired,
@@ -151,4 +151,4 @@ FormNewUser.propTypes = {
   setUsers: PropTypes.func.isRequired,
 };
 
-export default FormNewUser;
+export default FormAdmin;
