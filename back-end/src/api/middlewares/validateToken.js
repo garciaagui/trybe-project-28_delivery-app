@@ -10,7 +10,7 @@ const validToken = async (token) => {
 };
 const validateToken = async (req, res, next) => {
   const { authorization } = req.headers;
-  const { type, message } = validToken(authorization);
+  const { type, message } = await validToken(authorization);
   if (type) {
     return res.status(mapError(type)).json({ message });
   }
