@@ -24,6 +24,13 @@ const sellerLoginData = {
   token: 'mockedToken',
 };
 
+const adminLoginData = {
+  email: 'adm@deliveryapp.com',
+  name: 'Delivery App Admin',
+  role: 'administrator',
+  token: 'mockedToken',
+};
+
 export default {
   emailInput,
   passwordInput,
@@ -36,4 +43,5 @@ export default {
   invalidPassword,
   loginData,
   sellerLoginData,
+  adminLoginData,
 };
