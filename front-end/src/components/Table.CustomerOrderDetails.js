@@ -20,31 +20,40 @@ function TableCustomerOrderDetails({ productsArray }) {
       return (
         <tr key={ i }>
           <td
+            className="customer-order-details-table-item-order"
             data-testid={
               `customer_order_details__element-order-table-item-number-${i}`
             }
           >
             { (i + 1) }
           </td>
-          <td data-testid={ `customer_order_details__element-order-table-name-${i}` }>
+          <td
+            className="customer-order-details-table-item-name"
+            data-testid={ `customer_order_details__element-order-table-name-${i}` }
+          >
             { name }
           </td>
-          <td data-testid={ `customer_order_details__element-order-table-quantity-${i}` }>
+          <td
+            className="customer-order-details-table-item-quantity"
+            data-testid={ `customer_order_details__element-order-table-quantity-${i}` }
+          >
             { SaleProduct.quantity }
           </td>
           <td
+            className="customer-order-details-table-item-price"
             data-testid={
               `customer_order_details__element-order-table-unit-price-${i}`
             }
           >
-            { conversions.convertPrice(price) }
+            { `R$ ${conversions.convertPrice(price)}` }
           </td>
           <td
+            className="customer-order-details-table-item-subtotal"
             data-testid={
               `customer_order_details__element-order-table-sub-total-${i}`
             }
           >
-            { conversions.convertPrice(SaleProduct.quantity * price) }
+            { `R$ ${conversions.convertPrice(SaleProduct.quantity * price)}` }
           </td>
         </tr>
       );
@@ -53,7 +62,7 @@ function TableCustomerOrderDetails({ productsArray }) {
   };
 
   return (
-    <div>
+    <section className="customer-order-details-table">
       <table>
         <thead>
           <tr>
@@ -66,11 +75,10 @@ function TableCustomerOrderDetails({ productsArray }) {
         </thead>
         <tbody>{fillTableDescription()}</tbody>
       </table>
-      <h2 data-testid="customer_order_details__element-order-total-price">
-        Total:
-        { `${conversions.convertPrice(totalCart)}` }
-      </h2>
-    </div>
+      <h3 data-testid="customer_order_details__element-order-total-price">
+        { `Total: R$ ${conversions.convertPrice(totalCart)}` }
+      </h3>
+    </section>
   );
 }
 

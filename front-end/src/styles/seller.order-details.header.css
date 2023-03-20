@@ -1,0 +1,70 @@
+.seller-order-details-header {
+  align-items: center;
+  background-color: var(--background-color);
+  display: flex;
+  height: 60px;
+  justify-content: space-between;
+  margin: 0 -20px;
+  padding: 0 20px;
+}
+
+.seller-order-details-id {
+  font-size: 28px;
+  font-weight: 800;
+  width: 200px;
+}
+
+.seller-order-details-date {
+  background-color: var(--background-border-color);
+  border-radius: 10px;
+  font-size: 28px;
+  font-weight: 800;
+  text-align: center;
+  width: 300px;
+}
+
+.seller-order-details-status {
+  border-radius: 10px;
+  color: white;
+  font-size: 28px;
+  font-weight: 800;
+  text-align: center;
+  width: 300px;
+}
+
+.seller-order-details-preparing-button {
+  background-color: var(--secondary-color);
+}
+
+.seller-order-details-dispatch-button {
+  background-color: var(--primary-color);
+}
+
+.seller-order-details-preparing-button, .seller-order-details-dispatch-button {
+  border: 2px solid var(--background-border-color);
+  border-radius: 10px;
+  color: white;
+  font-size: 24px;
+  font-weight: 800;
+  height: 45px;
+  transition: 0.3s;
+  width: 350px;
+}
+
+.seller-order-details-preparing-button:disabled {
+  opacity: 0.5;
+  pointer-events: none;
+}
+
+.seller-order-details-dispatch-button:disabled {
+  opacity: 0.5;
+  pointer-events: none;
+}
+
+.seller-order-details-preparing-button:hover {
+  background-color: var(--tertiary-color);
+}
+
+.seller-order-details-dispatch-button:hover {
+  background-color: var(--tertiary-color);
+}

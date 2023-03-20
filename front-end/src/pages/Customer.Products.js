@@ -6,6 +6,9 @@ import api from '../services/requests';
 import useValidateAuth from '../hooks/useValidateAuth';
 import DeliveryAppContext from '../context/DeliveryAppContext';
 import conversions from '../utils/conversions';
+import '../styles/customer.navbar.css';
+import '../styles/customer.products.css';
+import '../styles/customer.product.card.css';
 
 function CustomerProducts(props) {
   const [products, setProducts] = useState([]);
@@ -43,27 +46,30 @@ function CustomerProducts(props) {
     <main>
       <NavBarCustomer />
 
-      {products.map((product) => (
-        <CardProducts
-          key={ product.id }
-          name={ product.name }
-          price={ Number(product.price) }
-          urlImage={ product.urlImage }
-          id={ product.id }
-        />
-      ))}
+      <section className="products-container">
+        {products.map((product) => (
+          <CardProducts
+            key={ product.id }
+            name={ product.name }
+            price={ Number(product.price) }
+            urlImage={ product.urlImage }
+            id={ product.id }
+          />
+        ))}
+      </section>
 
-      <div>
+      <div className="cart-button-section">
         <button
           type="button"
           data-testid="customer_products__button-cart"
-          className="button-cart"
+          className="btn btn-primary"
           disabled={ totalValue === '0,00' }
           onClick={ handleClickCart }
         >
           <span
             data-testid="customer_products__checkout-bottom-value"
           >
+            Ver Carrinho: R$
             { totalValue }
           </span>
         </button>

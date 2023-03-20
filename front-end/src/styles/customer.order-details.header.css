@@ -1,0 +1,66 @@
+.customer-order-details-header {
+  align-items: center;
+  background-color: var(--background-color);
+  display: flex;
+  height: 60px;
+  justify-content: space-between;
+  margin: 0 -20px;
+  padding: 0 20px;
+}
+
+.customer-order-details-id {
+  font-size: 28px;
+  font-weight: 800;
+  width: 200px;
+}
+
+.customer-order-details-seller {
+  font-size: 24px;
+  text-align: center;
+  width: 400px;
+
+}
+
+.customer-order-details-seller .seller-name {
+  font-weight: 800;
+}
+
+.customer-order-details-date {
+  background-color: var(--background-border-color);
+  border-radius: 10px;
+  font-size: 28px;
+  font-weight: 800;
+  text-align: center;
+  width: 300px;
+}
+
+.customer-order-details-status {
+  border-radius: 10px;
+  color: white;
+  font-size: 28px;
+  font-weight: 800;
+  text-align: center;
+  width: 300px;
+}
+
+.customer-order-details-finish-button {
+  background-color: var(--primary-color);
+  border: 2px solid var(--background-border-color);
+  border-radius: 10px;
+  color: white;
+  font-size: 24px;
+  font-weight: 800;
+  height: 45px;
+  transition: 0.3s;
+  width: 350px;
+}
+
+.customer-order-details-finish-button:disabled {
+  background-color: var(--primary-color);
+  opacity: 0.5;
+  pointer-events: none;
+}
+
+.customer-order-details-finish-button:hover {
+  background-color: var(--tertiary-color);
+}
